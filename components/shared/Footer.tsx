@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from './Container';
 import {
   Facebook,
@@ -54,9 +55,13 @@ export function Footer() {
             {/* Brand Column */}
             <div className="lg:col-span-2">
               <Link href="/" className="inline-block">
-                <span className="text-2xl font-display font-bold text-white">
-                  Inc<span className="text-gold-400">Sight</span>
-                </span>
+                <Image
+                  src="/static/images/logo.png"
+                  alt="IncSight"
+                  width={140}
+                  height={36}
+                  className="h-9 w-auto invert"
+                />
               </Link>
               <p className="mt-4 text-navy-300 max-w-md">
                 Expert tax services and accounting solutions designed to

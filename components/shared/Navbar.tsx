@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -73,10 +74,15 @@ export function Navbar() {
       <Container>
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-display font-bold text-navy-900 dark:text-white">
-              Inc<span className="text-gold-400">Sight</span>
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/static/images/logo.png"
+              alt="IncSight"
+              width={140}
+              height={36}
+              className="h-9 w-auto dark:invert"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
