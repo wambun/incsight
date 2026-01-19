@@ -101,9 +101,9 @@ export default function ContactPage() {
               of the channels below or fill out the form.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {contactInfo.map((item) => (
-                <div key={item.label} className="flex items-start gap-4">
+                <div key={item.label} className="flex items-center gap-4 min-h-[44px]">
                   <div className="w-12 h-12 bg-gold-400/10 rounded-xl flex items-center justify-center flex-shrink-0">
                     <item.icon className="w-6 h-6 text-gold-500" />
                   </div>
@@ -114,7 +114,7 @@ export default function ContactPage() {
                     {item.href ? (
                       <a
                         href={item.href}
-                        className="font-semibold text-navy-900 dark:text-white hover:text-gold-500 transition-colors"
+                        className="font-semibold text-navy-900 dark:text-white hover:text-gold-500 transition-colors inline-flex items-center min-h-[44px]"
                       >
                         {item.value}
                       </a>
@@ -191,7 +191,7 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-navy-50 dark:bg-navy-700 border border-navy-200 dark:border-navy-600 rounded-lg text-navy-900 dark:text-white placeholder:text-navy-400 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+                        className="w-full px-4 py-3 min-h-[44px] bg-navy-50 dark:bg-navy-700 border border-navy-200 dark:border-navy-600 rounded-lg text-navy-900 dark:text-white placeholder:text-navy-400 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
                         placeholder="John Smith"
                       />
                     </div>
@@ -209,7 +209,7 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-navy-50 dark:bg-navy-700 border border-navy-200 dark:border-navy-600 rounded-lg text-navy-900 dark:text-white placeholder:text-navy-400 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+                        className="w-full px-4 py-3 min-h-[44px] bg-navy-50 dark:bg-navy-700 border border-navy-200 dark:border-navy-600 rounded-lg text-navy-900 dark:text-white placeholder:text-navy-400 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
                         placeholder="john@company.com"
                       />
                     </div>
@@ -229,7 +229,7 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-navy-50 dark:bg-navy-700 border border-navy-200 dark:border-navy-600 rounded-lg text-navy-900 dark:text-white placeholder:text-navy-400 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+                        className="w-full px-4 py-3 min-h-[44px] bg-navy-50 dark:bg-navy-700 border border-navy-200 dark:border-navy-600 rounded-lg text-navy-900 dark:text-white placeholder:text-navy-400 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
                         placeholder="(555) 123-4567"
                       />
                     </div>
@@ -246,7 +246,7 @@ export default function ContactPage() {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-navy-50 dark:bg-navy-700 border border-navy-200 dark:border-navy-600 rounded-lg text-navy-900 dark:text-white placeholder:text-navy-400 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+                        className="w-full px-4 py-3 min-h-[44px] bg-navy-50 dark:bg-navy-700 border border-navy-200 dark:border-navy-600 rounded-lg text-navy-900 dark:text-white placeholder:text-navy-400 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
                         placeholder="Your Company LLC"
                       />
                     </div>
@@ -264,7 +264,7 @@ export default function ContactPage() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-navy-50 dark:bg-navy-700 border border-navy-200 dark:border-navy-600 rounded-lg text-navy-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
+                      className="w-full px-4 py-3 min-h-[44px] bg-navy-50 dark:bg-navy-700 border border-navy-200 dark:border-navy-600 rounded-lg text-navy-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent"
                     >
                       <option value="">Select a service</option>
                       <option value="tax-planning">Tax Planning</option>
@@ -290,7 +290,7 @@ export default function ContactPage() {
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-navy-50 dark:bg-navy-700 border border-navy-200 dark:border-navy-600 rounded-lg text-navy-900 dark:text-white placeholder:text-navy-400 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent resize-none"
+                      className="w-full px-4 py-3 min-h-[44px] bg-navy-50 dark:bg-navy-700 border border-navy-200 dark:border-navy-600 rounded-lg text-navy-900 dark:text-white placeholder:text-navy-400 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent resize-none"
                       placeholder="Tell us about your business and how we can help..."
                     />
                   </div>
