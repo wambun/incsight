@@ -1,18 +1,34 @@
-/* Configure colors at https://shipixen.com/color-theme-explorer-shadcn */
+/* IncSight Design System - Based on Nikka Template */
 const colors = {
   primary: {
-    lighter: '#fde047',
-    light: '#facc15',
-    main: '#eab308',
-    dark: '#ca8a04',
-    darker: '#a16207',
+    lighter: '#1a2e31',
+    light: '#132030',
+    main: '#0c1e21',
+    dark: '#091518',
+    darker: '#050a0c',
   },
   secondary: {
-    lighter: '#6ee7b7',
-    light: '#34d399',
-    main: '#10b981',
-    dark: '#059669',
-    darker: '#047857',
+    lighter: '#e8d85c',
+    light: '#e3d24a',
+    main: '#ddca3f',
+    dark: '#c9b736',
+    darker: '#b5a42d',
+  },
+  accent: {
+    gold: '#ddca3f',
+    goldHover: '#c9b736',
+  },
+  neutral: {
+    50: '#fdfbf6',
+    100: '#f4f8f8',
+    200: '#e8eded',
+    400: '#9a9fa0',
+    900: '#191919',
+  },
+  text: {
+    primary: '#242422',
+    secondary: '#9a9fa0',
+    inverse: '#ffffff',
   },
 };
 

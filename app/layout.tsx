@@ -1,4 +1,4 @@
-import { Nunito_Sans } from 'next/font/google';
+import { Inter, Plus_Jakarta_Sans, Roboto_Mono } from 'next/font/google';
 import { siteConfig } from '@/data/config/site.settings';
 import { ThemeProviders } from './theme-providers';
 import { Metadata } from 'next';
@@ -6,19 +6,24 @@ import { Metadata } from 'next';
 import { colors } from '@/data/config/colors.js';
 
 import '@/css/globals.css';
-import { SearchProvider } from '@/components/shared/SearchProvider';
-import { AnalyticsWrapper } from '@/components/shared/Analytics';
 
-const displayFont = Nunito_Sans({
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-space-display',
+  variable: '--font-inter',
 });
 
-const baseFont = Nunito_Sans({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-space-default',
+  variable: '--font-display',
+  weight: ['400', '500', '600', '700', '800'],
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto-mono',
 });
 
 const globalColors = colors;
@@ -79,7 +84,7 @@ export default function RootLayout({
   return (
     <html
       lang={siteConfig.language}
-      className={`${baseFont.variable} ${displayFont.variable} scroll-smooth`}
+      className={`${inter.variable} ${plusJakartaSans.variable} ${robotoMono.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <head>
@@ -129,16 +134,12 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
 
-      <body className="flex flex-col bg-white text-black antialiased dark:bg-gray-950 dark:text-white min-h-screen">
+      <body className="flex flex-col bg-neutral-50 text-navy-900 antialiased dark:bg-navy-900 dark:text-white min-h-screen font-sans">
         <ThemeProviders>
-          <AnalyticsWrapper />
-
-          <div className="w-full flex flex-col justify-between items-center font-sans">
-            <SearchProvider>
-              <main className="w-full flex flex-col items-center mb-auto">
-                {children}
-              </main>
-            </SearchProvider>
+          <div className="w-full flex flex-col min-h-screen">
+            <main className="flex-1 w-full">
+              {children}
+            </main>
           </div>
         </ThemeProviders>
       </body>
