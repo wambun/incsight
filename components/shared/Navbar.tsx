@@ -93,7 +93,7 @@ export function Navbar() {
                 <Link
                   href={item.href}
                   className={cn(
-                    'flex items-center gap-1 text-sm font-medium transition-colors',
+                    'flex items-center gap-1 text-sm font-medium transition-colors min-h-[44px]',
                     pathname === item.href || pathname.startsWith(item.href + '/')
                       ? 'text-gold-400'
                       : 'text-navy-900 dark:text-white hover:text-gold-400'
@@ -119,7 +119,7 @@ export function Navbar() {
                             key={child.href}
                             href={child.href}
                             className={cn(
-                              'block px-4 py-2 text-sm transition-colors',
+                              'flex items-center px-4 min-h-[44px] text-sm transition-colors',
                               pathname === child.href
                                 ? 'text-gold-400 bg-navy-50 dark:bg-navy-700'
                                 : 'text-navy-700 dark:text-navy-200 hover:text-gold-400 hover:bg-navy-50 dark:hover:bg-navy-700'
@@ -145,7 +145,7 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-navy-900 dark:text-white"
+            className="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-navy-900 dark:text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
           >
@@ -175,7 +175,7 @@ export function Navbar() {
                     <Link
                       href={item.href}
                       className={cn(
-                        'block py-2 text-lg font-medium',
+                        'flex items-center min-h-[44px] text-lg font-medium',
                         pathname === item.href
                           ? 'text-gold-400'
                           : 'text-navy-900 dark:text-white'
@@ -184,13 +184,13 @@ export function Navbar() {
                       {item.label}
                     </Link>
                     {item.children && (
-                      <div className="ml-4 mt-2 space-y-2">
+                      <div className="ml-4 space-y-1">
                         {item.children.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
                             className={cn(
-                              'block py-1 text-base',
+                              'flex items-center min-h-[44px] text-base',
                               pathname === child.href
                                 ? 'text-gold-400'
                                 : 'text-navy-600 dark:text-navy-300'

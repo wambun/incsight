@@ -150,7 +150,7 @@ export function ServicesGrid() {
             </ul>
             <Link
               href={service.href}
-              className="inline-flex items-center gap-2 text-gold-500 group-hover:text-gold-400 font-semibold transition-colors"
+              className="inline-flex items-center gap-2 text-gold-500 group-hover:text-gold-400 font-semibold transition-colors min-h-[44px]"
             >
               Learn More
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

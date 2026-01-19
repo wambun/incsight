@@ -64,23 +64,23 @@ export function Footer() {
               </p>
 
               {/* Contact Info */}
-              <div className="mt-6 space-y-3">
+              <div className="mt-6 space-y-1">
                 <a
                   href="mailto:info@incsight.net"
-                  className="flex items-center gap-3 text-navy-300 hover:text-gold-400 transition-colors"
+                  className="flex items-center gap-3 text-navy-300 hover:text-gold-400 transition-colors min-h-[44px] py-2"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-5 h-5 flex-shrink-0" />
                   <span>info@incsight.net</span>
                 </a>
                 <a
                   href="tel:+1234567890"
-                  className="flex items-center gap-3 text-navy-300 hover:text-gold-400 transition-colors"
+                  className="flex items-center gap-3 text-navy-300 hover:text-gold-400 transition-colors min-h-[44px] py-2"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5 flex-shrink-0" />
                   <span>(123) 456-7890</span>
                 </a>
-                <div className="flex items-start gap-3 text-navy-300">
-                  <MapPin className="w-5 h-5 mt-0.5" />
+                <div className="flex items-center gap-3 text-navy-300 min-h-[44px] py-2">
+                  <MapPin className="w-5 h-5 flex-shrink-0" />
                   <span>Miami, FL (Remote Nationwide)</span>
                 </div>
               </div>
@@ -91,7 +91,7 @@ export function Footer() {
                   <a
                     key={social.label}
                     href={social.href}
-                    className="p-2 rounded-lg bg-navy-800 text-navy-300 hover:bg-gold-400 hover:text-navy-900 transition-all"
+                    className="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg bg-navy-800 text-navy-300 hover:bg-gold-400 hover:text-navy-900 transition-all"
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5" />
@@ -105,12 +105,12 @@ export function Footer() {
               <h3 className="text-sm font-semibold uppercase tracking-wider text-gold-400 mb-4">
                 Services
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-1">
                 {footerLinks.services.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-navy-300 hover:text-white transition-colors"
+                      className="text-navy-300 hover:text-white transition-colors inline-flex items-center min-h-[44px]"
                     >
                       {link.label}
                     </Link>
@@ -124,12 +124,12 @@ export function Footer() {
               <h3 className="text-sm font-semibold uppercase tracking-wider text-gold-400 mb-4">
                 Industries
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-1">
                 {footerLinks.industries.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-navy-300 hover:text-white transition-colors"
+                      className="text-navy-300 hover:text-white transition-colors inline-flex items-center min-h-[44px]"
                     >
                       {link.label}
                     </Link>
@@ -140,12 +140,12 @@ export function Footer() {
               <h3 className="text-sm font-semibold uppercase tracking-wider text-gold-400 mb-4 mt-8">
                 Company
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-1">
                 {footerLinks.company.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-navy-300 hover:text-white transition-colors"
+                      className="text-navy-300 hover:text-white transition-colors inline-flex items-center min-h-[44px]"
                     >
                       {link.label}
                     </Link>
@@ -185,12 +185,12 @@ export function Footer() {
             <p className="text-navy-400 text-sm">
               &copy; {new Date().getFullYear()} IncSight. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
               {footerLinks.legal.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-navy-400 hover:text-white text-sm transition-colors"
+                  className="text-navy-400 hover:text-white text-sm transition-colors inline-flex items-center min-h-[44px] px-2"
                 >
                   {link.label}
                 </Link>
