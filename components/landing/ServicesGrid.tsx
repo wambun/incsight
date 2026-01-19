@@ -83,7 +83,7 @@ const itemVariants = {
 
 export function ServicesGrid() {
   return (
-    <Section background="light" padding="xl" id="services">
+    <Section background="light" padding="xl" divider id="services">
       <div className="text-center mb-16">
         <motion.span
           initial={{ opacity: 0, y: 10 }}
@@ -125,7 +125,7 @@ export function ServicesGrid() {
           <motion.div
             key={service.title}
             variants={itemVariants}
-            className={`group relative bg-navy-50 dark:bg-navy-800 rounded-2xl p-8 hover:bg-navy-900 dark:hover:bg-navy-700 transition-all duration-300 ${
+            className={`group relative bg-navy-50 dark:bg-navy-800 rounded-2xl p-12 hover:bg-navy-900 dark:hover:bg-navy-700 transition-all duration-300 border border-navy-100 dark:border-navy-700 ${
               index === services.length - 1 && services.length % 3 !== 0
                 ? 'md:col-span-2 lg:col-span-1'
                 : ''

@@ -89,7 +89,7 @@ export default function ContactPage() {
       </Section>
 
       {/* Contact Form & Info */}
-      <Section background="light" padding="xl">
+      <Section background="cream" padding="xl">
         <div className="grid lg:grid-cols-5 gap-12">
           {/* Contact Info */}
           <div className="lg:col-span-2">

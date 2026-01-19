@@ -59,7 +59,7 @@ const itemVariants = {
 
 export function IndustriesSection() {
   return (
-    <Section background="light" padding="xl" id="industries">
+    <Section background="cream" padding="xl" divider id="industries">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         {/* Content */}
         <div>
@@ -106,7 +106,7 @@ export function IndustriesSection() {
             <motion.div key={industry.title} variants={itemVariants}>
               <Link
                 href={industry.href}
-                className="group flex items-center gap-6 p-6 bg-navy-50 dark:bg-navy-800 rounded-xl hover:bg-navy-900 dark:hover:bg-navy-700 transition-all duration-300"
+                className="group flex items-center gap-6 p-6 bg-navy-50 dark:bg-navy-800 rounded-xl hover:bg-navy-900 dark:hover:bg-navy-700 transition-all duration-300 border border-navy-100 dark:border-navy-700"
               >
                 <div
                   className={`w-14 h-14 ${industry.color} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}

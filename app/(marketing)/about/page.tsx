@@ -119,7 +119,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Our Story */}
-      <Section background="light" padding="xl">
+      <Section background="cream" padding="xl" divider>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <span className="inline-block text-sm font-semibold text-gold-500 uppercase tracking-wider mb-4">
@@ -173,7 +173,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Values */}
-      <Section background="sage" padding="xl">
+      <Section background="light" padding="xl" divider>
         <div className="text-center mb-16">
           <span className="inline-block text-sm font-semibold text-gold-500 uppercase tracking-wider mb-4">
             Our Values
@@ -204,7 +204,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Team */}
-      <Section background="light" padding="xl">
+      <Section background="cream" padding="xl" divider>
         <div className="text-center mb-16">
           <span className="inline-block text-sm font-semibold text-gold-500 uppercase tracking-wider mb-4">
             Our Team
@@ -242,7 +242,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Technology Partners */}
-      <Section background="sage" padding="lg">
+      <Section background="light" padding="lg" divider>
         <div className="text-center">
           <span className="inline-block text-sm font-semibold text-gold-500 uppercase tracking-wider mb-4">
             Technology Partners

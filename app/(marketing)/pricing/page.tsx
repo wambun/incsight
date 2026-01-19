@@ -29,7 +29,7 @@ export default function PricingPage() {
       </Section>
 
       {/* Pricing Cards */}
-      <Section background="light" padding="xl">
+      <Section background="cream" padding="xl" divider>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pricingPlans.map((plan) => (
             <motion.div
@@ -37,7 +37,7 @@ export default function PricingPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className={`relative bg-white dark:bg-navy-800 rounded-2xl p-8 border-2 ${
+              className={`relative bg-navy-50 dark:bg-navy-800 rounded-2xl p-12 border-2 ${
                 plan.highlighted
                   ? 'border-gold-400 shadow-xl'
                   : 'border-navy-100 dark:border-navy-700'
@@ -112,7 +112,7 @@ export default function PricingPage() {
       </Section>
 
       {/* FAQs */}
-      <Section background="sage" padding="xl">
+      <Section background="light" padding="xl" divider>
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block text-sm font-semibold text-gold-500 uppercase tracking-wider mb-4">
@@ -127,7 +127,7 @@ export default function PricingPage() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-navy-800 rounded-xl overflow-hidden"
+                className="bg-navy-50 dark:bg-navy-800 rounded-xl overflow-hidden border border-navy-100 dark:border-navy-700"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}

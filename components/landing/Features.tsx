@@ -71,7 +71,7 @@ const itemVariants = {
 
 export function Features() {
   return (
-    <Section background="sage" padding="xl" id="features">
+    <Section background="cream" padding="xl" divider id="features">
       <div className="text-center mb-16">
         <motion.span
           initial={{ opacity: 0, y: 10 }}
@@ -113,7 +113,7 @@ export function Features() {
           <motion.div
             key={feature.title}
             variants={itemVariants}
-            className="group bg-white dark:bg-navy-800 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-navy-100 dark:border-navy-700"
+            className="group bg-navy-50 dark:bg-navy-800 rounded-2xl p-12 hover:shadow-lg transition-all duration-300 border border-navy-100 dark:border-navy-700"
           >
             <div className="w-14 h-14 bg-gold-400/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold-400 group-hover:scale-110 transition-all duration-300">
               <feature.icon className="w-7 h-7 text-gold-500 group-hover:text-navy-900 transition-colors" />

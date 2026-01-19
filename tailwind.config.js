@@ -80,6 +80,11 @@ module.exports = {
           900: '#0c1e21',
           950: '#050a0c',
         },
+        'cream': {
+          50: '#fefdfb',
+          100: '#fdfbf6',
+          200: '#faf7f0',
+        },
         'gold': {
           50: '#fdfbe8',
           100: '#fcf5c4',

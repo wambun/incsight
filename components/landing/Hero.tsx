@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Container } from '@/components/shared/Container';
 import { Button } from '@/components/shared/Button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
@@ -27,19 +26,10 @@ const highlights = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-900 to-navy-800" />
-
-      {/* Decorative Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -right-1/4 w-1/2 h-1/2 bg-gold-400/10 rounded-full blur-3xl" />
-        <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-gold-400/5 rounded-full blur-3xl" />
-      </div>
-
-      <Container className="relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Content */}
+    <section className="relative min-h-screen lg:min-h-[800px] flex">
+      {/* Left Side - Content */}
+      <div className="relative w-full lg:w-1/2 bg-navy-900 flex items-center">
+        <div className="w-full max-w-[600px] mx-auto px-6 sm:px-8 lg:px-12 lg:ml-auto lg:mr-0 py-20 lg:py-0">
           <motion.div
             initial="initial"
             animate="animate"
@@ -56,7 +46,7 @@ export function Hero() {
 
             <motion.h1
               variants={fadeIn}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white leading-tight"
+              className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white leading-tight"
             >
               Minimize Taxes.
               <br />
@@ -65,7 +55,7 @@ export function Hero() {
 
             <motion.p
               variants={fadeIn}
-              className="mt-6 text-lg sm:text-xl text-navy-300 max-w-xl mx-auto lg:mx-0"
+              className="mt-6 text-lg text-navy-300 max-w-md"
             >
               Strategic tax planning and premium accounting solutions for
               service-based businesses. We help contractors, tradespeople, and
@@ -102,55 +92,81 @@ export function Hero() {
               </Button>
             </motion.div>
           </motion.div>
-
-          {/* Visual */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative hidden lg:block"
-          >
-            <div className="relative">
-              {/* Main Card */}
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gold-400 rounded-xl flex items-center justify-center">
-                      <span className="text-2xl font-bold text-navy-900">$</span>
-                    </div>
-                    <div>
-                      <p className="text-navy-300 text-sm">Tax Savings</p>
-                      <p className="text-2xl font-bold text-white">$47,250</p>
-                    </div>
-                  </div>
-
-                  <div className="h-px bg-white/10" />
-
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-navy-300">Revenue</span>
-                      <span className="text-white font-semibold">$425,000</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-navy-300">Deductions Found</span>
-                      <span className="text-gold-400 font-semibold">+$89,500</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-navy-300">Effective Tax Rate</span>
-                      <span className="text-green-400 font-semibold">18.2%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Badge */}
-              <div className="absolute -top-4 -right-4 bg-gold-400 text-navy-900 px-4 py-2 rounded-full font-semibold text-sm shadow-lg">
-                Year-Round Support
-              </div>
-            </div>
-          </motion.div>
         </div>
-      </Container>
+      </div>
+
+      {/* Right Side - Visual/Image Placeholder */}
+      <div className="hidden lg:block w-1/2 relative overflow-hidden">
+        {/* Gradient Background - Placeholder for future image */}
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-800 via-navy-700 to-navy-600" />
+
+        {/* Decorative Pattern Overlay */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gold-400/20 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold-400/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cream-100/5 rounded-full blur-2xl transform -translate-x-1/2 -translate-y-1/2" />
+        </div>
+
+        {/* Geometric Shapes */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="absolute inset-0 flex items-center justify-center"
+        >
+          <div className="relative">
+            {/* Abstract Financial Chart/Bars */}
+            <div className="flex items-end gap-4 h-64">
+              <motion.div
+                initial={{ height: 0 }}
+                animate={{ height: '40%' }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="w-12 bg-gradient-to-t from-gold-400/40 to-gold-400/80 rounded-t-lg"
+              />
+              <motion.div
+                initial={{ height: 0 }}
+                animate={{ height: '65%' }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="w-12 bg-gradient-to-t from-gold-400/50 to-gold-400/90 rounded-t-lg"
+              />
+              <motion.div
+                initial={{ height: 0 }}
+                animate={{ height: '85%' }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                className="w-12 bg-gradient-to-t from-gold-400/60 to-gold-400 rounded-t-lg"
+              />
+              <motion.div
+                initial={{ height: 0 }}
+                animate={{ height: '100%' }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="w-12 bg-gradient-to-t from-gold-500 to-gold-400 rounded-t-lg shadow-lg shadow-gold-400/30"
+              />
+            </div>
+
+            {/* Floating Card Overlay */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1 }}
+              className="absolute -bottom-8 -left-8 bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
+            >
+              <p className="text-navy-200 text-sm">Average Tax Savings</p>
+              <p className="text-2xl font-bold text-white mt-1">$47,250</p>
+              <p className="text-gold-400 text-sm mt-1">+32% vs. last year</p>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Grid Pattern Overlay */}
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                             linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+            backgroundSize: '40px 40px',
+          }}
+        />
+      </div>
     </section>
   );
 }

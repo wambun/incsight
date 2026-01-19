@@ -7,7 +7,7 @@ import { ArrowRight, Calendar, MessageCircle } from 'lucide-react';
 
 export function CTASection() {
   return (
-    <Section background="sage" padding="xl">
+    <Section background="cream" padding="xl">
       <div className="relative overflow-hidden rounded-3xl bg-navy-900 p-12 md:p-16 lg:p-20">
         {/* Background Decorations */}
         <div className="absolute inset-0 overflow-hidden">

@@ -8,8 +8,9 @@ interface SectionProps {
   className?: string;
   containerClassName?: string;
   containerSize?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
-  background?: 'light' | 'dark' | 'navy' | 'sage' | 'transparent';
+  background?: 'light' | 'dark' | 'navy' | 'sage' | 'cream' | 'transparent';
   padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
+  divider?: boolean;
   id?: string;
 }
 
@@ -18,6 +19,7 @@ const backgroundClasses = {
   dark: 'bg-navy-900 text-white',
   navy: 'bg-navy-900 text-white',
   sage: 'bg-navy-50 dark:bg-navy-800',
+  cream: 'bg-cream-100 dark:bg-navy-900',
   transparent: 'bg-transparent',
 };
 
@@ -36,6 +38,7 @@ export function Section({
   containerSize = 'xl',
   background = 'transparent',
   padding = 'lg',
+  divider = false,
   id,
 }: SectionProps) {
   return (
@@ -45,6 +48,7 @@ export function Section({
         'relative w-full',
         backgroundClasses[background],
         paddingClasses[padding],
+        divider && 'border-b border-navy-100 dark:border-navy-800',
         className
       )}
     >
