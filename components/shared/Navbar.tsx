@@ -80,7 +80,7 @@ export function Navbar() {
               alt="IncSight"
               width={140}
               height={36}
-              className="h-9 w-auto dark:invert"
+              className="h-9 w-auto invert dark:invert-0"
               priority
             />
           </Link>

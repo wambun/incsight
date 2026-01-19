@@ -60,7 +60,7 @@ export function Footer() {
                   alt="IncSight"
                   width={140}
                   height={36}
-                  className="h-9 w-auto invert"
+                  className="h-9 w-auto"
                 />
               </Link>
               <p className="mt-4 text-navy-300 max-w-md">
